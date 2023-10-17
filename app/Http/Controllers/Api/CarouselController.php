@@ -49,6 +49,10 @@ class CarouselController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $carousel = Carousel::findorfail($id);
+ 
+        $carousel->delete();
+
+        return $carousel;
     }
 }
