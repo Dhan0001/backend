@@ -45,9 +45,15 @@ class CarouselController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(CarouselRequest $request, string $id)
     {
-        //
+        $validated = $request->validated();
+
+        $carousel = Carousel::findorfail($id);
+
+        $carousel -> update($validated);
+
+        return $carousel;
     }
 
     /**
