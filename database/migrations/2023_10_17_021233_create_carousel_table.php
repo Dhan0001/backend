@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('carousel_id');
             $table->string('carousel_name')->nullable();
             $table->string('image_path');
-            $table->string('discription')->nullable();
+            $table->string('description')->nullable();
             $table->timestamps();
         });
         
