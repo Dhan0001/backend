@@ -3,6 +3,8 @@
 
 use App\Http\Controllers\Api\CarouselController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\LetterController;
+use App\Http\Requests\LetterRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
@@ -29,7 +31,7 @@ Route::post('/carousels', [CarouselController::class, 'store']);
 Route::put('/carousels/{id}', [CarouselController::class, 'update']);
 Route::delete('/carousels/{id}', [CarouselController::class, 'destroy']);
 
-Route::delete('/user/{id}', [UserController::class, 'destroy']);
-Route::get('/user/{id}', [UserController::class, 'show']);
-Route::get('/user', [UserController::class, 'index']);
-Route::post('/user', [UserController::class, 'store']);
+Route::delete('/letter/{id}', [LetterController::class, 'destroy']);
+Route::get('/letter/{id}', [LetterController::class, 'show']);
+Route::get('/letter', [LetterController::class, 'index']);
+Route::post('/letter', [LetterController::class, 'store']);
